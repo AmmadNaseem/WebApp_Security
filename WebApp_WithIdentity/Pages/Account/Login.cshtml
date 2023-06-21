@@ -1,0 +1,50 @@
+﻿@page
+@model WebApp_WithIdentity.Pages.Account.LoginModel
+@{
+}
+
+<div class="container border" style="padding:20px;">
+    <form method="post">
+        <div class="text-danger" asp-validation-summary="ModelOnly">
+
+        </div>
+        <div class="form-group row my-2">
+            <div class="col-2">
+                <label asp-for="Credential.userName"></label>
+            </div>
+            <div class="col-5">
+                <input type="text" class="form-control" asp-for="Credential.userName" />
+            </div>
+            <span class="text-danger" asp-validation-for="Credential.userName"></span>
+
+        </div>
+
+        <div class="form-group row my-2">
+            <div class="col-2">
+                <label asp-for="Credential.Password"></label>
+            </div>
+            <div class="col-5">
+                <input type="password" class="form-control" asp-for="Credential.Password" />
+            </div>
+            <span class="text-danger" asp-validation-for="Credential.Password"></span>
+
+        </div>
+        <div class="form-group row my-2">
+            <div class="col-2">
+                <input type="checkbox" class="form-check-input" asp-for="Credential.RememberMe" />
+                <label class="form-check-label" asp-for="Credential.RememberMe"> Remember Me</label>
+            </div>
+        </div>
+
+
+        <div class="form-group row my-2">
+            <div class="col-2">
+                <input type="submit" class="btn btn-primary" value="Login" />
+            </div>
+            <div class="col-5">
+            </div>
+        </div>
+
+    </form>
+
+</div>
